@@ -1,0 +1,24 @@
+{
+  "name": "apiproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhnehra/APIProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhnehra/APIProject/issues"
+  },
+  "homepage": "https://github.com/rishabhnehra/APIProject#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "morgan": "^1.9.1"
+  }
+}
