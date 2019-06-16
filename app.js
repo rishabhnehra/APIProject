@@ -1,12 +1,16 @@
 const express = require('express');
 const logger = require('morgan');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const users = require('./routes/users')
 
 const app = express();
 const port = process.env.PORT || 4000;
 
+mongoose.connect(`mongodb://localhost:27017/apiproject'`)
 app.use(logger('dev'));
+app.use(bodyParser.json());
 
 app.use('/users', users);
 
@@ -19,6 +23,7 @@ app.use((req, res, next) => {
 
 // Error handler
 app.use((err, req, res, next) => {
+    console.error(err)
     res.status(500).json({
         message: err.message
     })
