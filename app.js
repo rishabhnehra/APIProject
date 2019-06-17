@@ -8,7 +8,7 @@ const users = require('./routes/users')
 const app = express();
 const port = process.env.PORT || 4000;
 
-mongoose.connect(`mongodb://localhost:27017/apiproject'`)
+mongoose.connect(`mongodb://localhost:27017/apiproject'`, { useNewUrlParser: true })
 app.use(logger('dev'));
 app.use(bodyParser.json());
 
